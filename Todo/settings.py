@@ -28,7 +28,7 @@ SECRET_KEY = 'django-insecure-yv5vp+#k#-wn%qqz1cub!6j9g!#)&kwax(3v5t(j@=a-(imj-k
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['*']
+ALLOWED_HOSTS = ['tachhe.herokuapp.com']
 
 
 # Application definition
@@ -77,8 +77,18 @@ WSGI_APPLICATION = 'Todo.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/3.2/ref/settings/#databases
 
+
 DATABASES = {
-    'default': dj_database_url.config()
+    'default': {
+        'ENGINE':'django.db.backends.postgresql_psycopg2',
+        'NAME': 'd2tq8rnoje9cgl',
+        'USER': 'nwbekqrmsreizh',
+        'PASSWORD':'2ff2f611b1b478ef71eaba9b6495e5e3d6b0b30994c3c779b052e54c1fbcc800',
+        'HOST': 'ec2-18-213-219-169.compute-1.amazonaws.com',
+        'PORT':5432,
+        
+
+    }
 }
 
 
